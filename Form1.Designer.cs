@@ -28,48 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.filePath_txtBox = new System.Windows.Forms.TextBox();
+            this.parseTxt_btn = new System.Windows.Forms.Button();
+            this.resultsView_txtBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // filePath_txtBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 27);
-            this.textBox1.TabIndex = 0;
+            this.filePath_txtBox.Location = new System.Drawing.Point(12, 36);
+            this.filePath_txtBox.Name = "filePath_txtBox";
+            this.filePath_txtBox.Size = new System.Drawing.Size(100, 23);
+            this.filePath_txtBox.TabIndex = 0;
             // 
-            // button1
+            // parseTxt_btn
             // 
-            this.button1.Location = new System.Drawing.Point(14, 55);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 31);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Parse Text";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Parse_Text_Click);
+            this.parseTxt_btn.Location = new System.Drawing.Point(12, 65);
+            this.parseTxt_btn.Name = "parseTxt_btn";
+            this.parseTxt_btn.Size = new System.Drawing.Size(75, 23);
+            this.parseTxt_btn.TabIndex = 1;
+            this.parseTxt_btn.Text = "Parse Text";
+            this.parseTxt_btn.UseVisualStyleBackColor = true;
+            this.parseTxt_btn.Click += new System.EventHandler(this.parseText_btnClick);
             // 
-            // textBox2
+            // resultsView_txtBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(14, 93);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(114, 27);
-            this.textBox2.TabIndex = 2;
+            this.resultsView_txtBox.Location = new System.Drawing.Point(139, 14);
+            this.resultsView_txtBox.Multiline = true;
+            this.resultsView_txtBox.Name = "resultsView_txtBox";
+            this.resultsView_txtBox.ReadOnly = true;
+            this.resultsView_txtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.resultsView_txtBox.Size = new System.Drawing.Size(226, 194);
+            this.resultsView_txtBox.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Enter Path";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClientSize = new System.Drawing.Size(380, 230);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.resultsView_txtBox);
+            this.Controls.Add(this.parseTxt_btn);
+            this.Controls.Add(this.filePath_txtBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -79,8 +88,9 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private Button button1;
-        private TextBox textBox2;
+        private TextBox filePath_txtBox;
+        private Button parseTxt_btn;
+        private TextBox resultsView_txtBox;
+        private Label label1;
     }
 }
