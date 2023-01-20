@@ -4,11 +4,12 @@ namespace TextParser
     public partial class Form1 : Form
     {
         private delegate bool isPathValid(string path);
+
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void parseText_btnClick(object sender, EventArgs e)
         {
             isPathValid validator = PathValidator.IsAbsolutePath;
@@ -24,11 +25,13 @@ namespace TextParser
                 }
             }
 
-        }
+            string contents = File.ReadAllText(database_path);
+            FileParser parser = new FileParser(contents);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            foreach (KeyValuePair<string, int> item in parser.GetWordCount())
+            {
+                resultsView_txtBox.Text += item.Key + ": " + item.Value.ToString() + Environment.NewLine;
+            }
         }
     }
 }
